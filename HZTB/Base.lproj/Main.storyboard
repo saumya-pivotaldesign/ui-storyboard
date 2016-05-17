@@ -36,20 +36,42 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7Y-lE-3OL">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requests Received / Given" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ML-4m-aLs">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="NFr-bp-kUH">
                                         <variation key="heightClass=regular-widthClass=compact" constant="240"/>
                                     </constraint>
+                                    <constraint firstItem="4ML-4m-aLs" firstAttribute="centerX" secondItem="J7Y-lE-3OL" secondAttribute="centerX" id="YVp-jZ-HF9"/>
+                                    <constraint firstAttribute="bottom" secondItem="4ML-4m-aLs" secondAttribute="bottom" constant="219" id="qVb-KF-C3u">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="4ML-4m-aLs"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <exclude reference="NFr-bp-kUH"/>
+                                        <exclude reference="YVp-jZ-HF9"/>
+                                        <exclude reference="qVb-KF-C3u"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="4ML-4m-aLs"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <include reference="NFr-bp-kUH"/>
+                                        <include reference="YVp-jZ-HF9"/>
+                                        <include reference="qVb-KF-C3u"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -72,17 +94,28 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeZ-M6-Okc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Store Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeZ-M6-Okc">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requests Sent / Received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4s-LO-BXJ">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="53" y="231" width="296" height="33"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FeZ-M6-Okc" firstAttribute="top" secondItem="Acr-MF-Qnk" secondAttribute="bottom" constant="-21" id="05m-lv-gEE">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-24"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-50"/>
                             </constraint>
                             <constraint firstItem="FeZ-M6-Okc" firstAttribute="centerX" secondItem="Acr-MF-Qnk" secondAttribute="centerX" id="2KJ-yL-00l"/>
                             <constraint firstItem="mpd-1r-i1H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6xQ-rs-1UC"/>
@@ -94,11 +127,13 @@
                             </constraint>
                             <constraint firstItem="Acr-MF-Qnk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="HxP-M1-Ez3"/>
                             <constraint firstItem="J7Y-lE-3OL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="T3B-fq-ujh"/>
+                            <constraint firstItem="s4s-LO-BXJ" firstAttribute="bottom" secondItem="mpd-1r-i1H" secondAttribute="bottom" id="TNZ-JI-rFI"/>
                             <constraint firstItem="mpd-1r-i1H" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dyF-Fr-chX"/>
                             <constraint firstItem="J7Y-lE-3OL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e2S-St-bnJ"/>
                             <constraint firstItem="Acr-MF-Qnk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="448" id="fZS-ID-PF2">
                                 <variation key="heightClass=regular-widthClass=compact" constant="440"/>
                             </constraint>
+                            <constraint firstItem="s4s-LO-BXJ" firstAttribute="centerX" secondItem="mpd-1r-i1H" secondAttribute="centerX" id="pyn-Iv-hmx"/>
                             <constraint firstItem="Acr-MF-Qnk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zqQ-Bp-lVm"/>
                         </constraints>
                         <variation key="default">
@@ -107,6 +142,7 @@
                                 <exclude reference="J7Y-lE-3OL"/>
                                 <exclude reference="Acr-MF-Qnk"/>
                                 <exclude reference="FeZ-M6-Okc"/>
+                                <exclude reference="s4s-LO-BXJ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6xQ-rs-1UC"/>
@@ -115,6 +151,8 @@
                                 <exclude reference="9YX-S5-B3u"/>
                                 <exclude reference="T3B-fq-ujh"/>
                                 <exclude reference="e2S-St-bnJ"/>
+                                <exclude reference="TNZ-JI-rFI"/>
+                                <exclude reference="pyn-Iv-hmx"/>
                                 <exclude reference="HxP-M1-Ez3"/>
                                 <exclude reference="fZS-ID-PF2"/>
                                 <exclude reference="zqQ-Bp-lVm"/>
@@ -128,6 +166,7 @@
                                 <include reference="J7Y-lE-3OL"/>
                                 <include reference="Acr-MF-Qnk"/>
                                 <include reference="FeZ-M6-Okc"/>
+                                <include reference="s4s-LO-BXJ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6xQ-rs-1UC"/>
@@ -136,6 +175,8 @@
                                 <include reference="9YX-S5-B3u"/>
                                 <include reference="T3B-fq-ujh"/>
                                 <include reference="e2S-St-bnJ"/>
+                                <include reference="TNZ-JI-rFI"/>
+                                <include reference="pyn-Iv-hmx"/>
                                 <include reference="HxP-M1-Ez3"/>
                                 <include reference="fZS-ID-PF2"/>
                                 <include reference="zqQ-Bp-lVm"/>
