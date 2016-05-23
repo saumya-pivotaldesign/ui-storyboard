@@ -12,6 +12,7 @@
 		AE531D671CEAED7C00F6F2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE531D651CEAED7C00F6F2A5 /* Main.storyboard */; };
 		AE531D691CEAED7C00F6F2A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE531D681CEAED7C00F6F2A5 /* Assets.xcassets */; };
 		AE531D6C1CEAED7C00F6F2A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE531D6A1CEAED7C00F6F2A5 /* LaunchScreen.storyboard */; };
+		AE8F08B71CF33C8A004048A0 /* VCNewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AE531D681CEAED7C00F6F2A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE531D6B1CEAED7C00F6F2A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE531D6D1CEAED7C00F6F2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCNewRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				AE531D611CEAED7C00F6F2A5 /* AppDelegate.swift */,
 				AE531D631CEAED7C00F6F2A5 /* ViewController.swift */,
+				AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */,
 				AE531D651CEAED7C00F6F2A5 /* Main.storyboard */,
 				AE531D681CEAED7C00F6F2A5 /* Assets.xcassets */,
 				AE531D6A1CEAED7C00F6F2A5 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8F08B71CF33C8A004048A0 /* VCNewRequest.swift in Sources */,
 				AE531D641CEAED7C00F6F2A5 /* ViewController.swift in Sources */,
 				AE531D621CEAED7C00F6F2A5 /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +290,7 @@
 				AE531D721CEAED7C00F6F2A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
