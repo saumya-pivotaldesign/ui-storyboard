@@ -69,8 +69,6 @@
 				AE531D611CEAED7C00F6F2A5 /* AppDelegate.swift */,
 				AE717FAD1CF587C2009DB28B /* SlideMenu */,
 				AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */,
-				AE717FBA1CF58840009DB28B /* VCHome.swift */,
-				AE717FBC1CF58D4F009DB28B /* VCSlideMenu.swift */,
 				AE531D681CEAED7C00F6F2A5 /* Assets.xcassets */,
 				AE531D651CEAED7C00F6F2A5 /* Main.storyboard */,
 				AE531D6A1CEAED7C00F6F2A5 /* LaunchScreen.storyboard */,
@@ -86,6 +84,8 @@
 				AE717FB01CF587DF009DB28B /* Interactor.swift */,
 				AE717FB11CF587DF009DB28B /* MenuHelper.swift */,
 				AE717FB31CF587DF009DB28B /* PresentMenuAnimator.swift */,
+				AE717FBA1CF58840009DB28B /* VCHome.swift */,
+				AE717FBC1CF58D4F009DB28B /* VCSlideMenu.swift */,
 			);
 			name = SlideMenu;
 			sourceTree = "<group>";
