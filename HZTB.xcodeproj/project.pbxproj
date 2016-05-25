@@ -19,6 +19,7 @@
 		AE717FB81CF587DF009DB28B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE717FB21CF587DF009DB28B /* MenuViewController.swift */; };
 		AE717FB91CF587DF009DB28B /* PresentMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE717FB31CF587DF009DB28B /* PresentMenuAnimator.swift */; };
 		AE717FBB1CF58840009DB28B /* VCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE717FBA1CF58840009DB28B /* VCHome.swift */; };
+		AE717FBD1CF58D4F009DB28B /* VCSlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE717FBC1CF58D4F009DB28B /* VCSlideMenu.swift */; };
 		AE8F08B71CF33C8A004048A0 /* VCNewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		AE717FB21CF587DF009DB28B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		AE717FB31CF587DF009DB28B /* PresentMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentMenuAnimator.swift; sourceTree = "<group>"; };
 		AE717FBA1CF58840009DB28B /* VCHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCHome.swift; sourceTree = "<group>"; };
+		AE717FBC1CF58D4F009DB28B /* VCSlideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCSlideMenu.swift; sourceTree = "<group>"; };
 		AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCNewRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				AE531D631CEAED7C00F6F2A5 /* ViewController.swift */,
 				AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */,
 				AE717FBA1CF58840009DB28B /* VCHome.swift */,
+				AE717FBC1CF58D4F009DB28B /* VCSlideMenu.swift */,
 				AE531D681CEAED7C00F6F2A5 /* Assets.xcassets */,
 				AE531D651CEAED7C00F6F2A5 /* Main.storyboard */,
 				AE531D6A1CEAED7C00F6F2A5 /* LaunchScreen.storyboard */,
@@ -174,6 +177,7 @@
 				AE8F08B71CF33C8A004048A0 /* VCNewRequest.swift in Sources */,
 				AE531D641CEAED7C00F6F2A5 /* ViewController.swift in Sources */,
 				AE531D621CEAED7C00F6F2A5 /* AppDelegate.swift in Sources */,
+				AE717FBD1CF58D4F009DB28B /* VCSlideMenu.swift in Sources */,
 				AE717FB91CF587DF009DB28B /* PresentMenuAnimator.swift in Sources */,
 				AE717FB71CF587DF009DB28B /* MenuHelper.swift in Sources */,
 				AE717FB81CF587DF009DB28B /* MenuViewController.swift in Sources */,
