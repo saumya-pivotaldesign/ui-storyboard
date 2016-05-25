@@ -66,8 +66,8 @@
 		AE531D601CEAED7C00F6F2A5 /* HZTB */ = {
 			isa = PBXGroup;
 			children = (
-				AE717FAD1CF587C2009DB28B /* SlideMenu */,
 				AE531D611CEAED7C00F6F2A5 /* AppDelegate.swift */,
+				AE717FAD1CF587C2009DB28B /* SlideMenu */,
 				AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */,
 				AE717FBA1CF58840009DB28B /* VCHome.swift */,
 				AE717FBC1CF58D4F009DB28B /* VCSlideMenu.swift */,
