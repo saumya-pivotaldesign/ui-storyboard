@@ -74,11 +74,11 @@
 				AE531D611CEAED7C00F6F2A5 /* AppDelegate.swift */,
 				AE531D631CEAED7C00F6F2A5 /* ViewController.swift */,
 				AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */,
+				AE717FBA1CF58840009DB28B /* VCHome.swift */,
 				AE531D681CEAED7C00F6F2A5 /* Assets.xcassets */,
 				AE531D651CEAED7C00F6F2A5 /* Main.storyboard */,
 				AE531D6A1CEAED7C00F6F2A5 /* LaunchScreen.storyboard */,
 				AE531D6D1CEAED7C00F6F2A5 /* Info.plist */,
-				AE717FBA1CF58840009DB28B /* VCHome.swift */,
 			);
 			path = HZTB;
 			sourceTree = "<group>";
