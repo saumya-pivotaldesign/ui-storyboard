@@ -23,7 +23,7 @@ class VCHome: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destinationViewController = segue.destinationViewController as? MenuViewController {
+        if let destinationViewController = segue.destinationViewController as? VCSlideMenu {
             destinationViewController.transitioningDelegate = self
             // 2
             destinationViewController.interactor = interactor
