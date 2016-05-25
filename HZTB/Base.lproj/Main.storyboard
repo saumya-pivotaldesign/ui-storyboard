@@ -286,20 +286,56 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxj-Cv-txA">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjd-on-cpC">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Qnc-MT-5vg"/>
+                                            <constraint firstAttribute="width" constant="100" id="cWY-bt-5Gc"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Camera"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Qnc-MT-5vg"/>
+                                                <exclude reference="cWY-bt-5Gc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Qnc-MT-5vg"/>
+                                                <include reference="cWY-bt-5Gc"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="pjd-on-cpC" firstAttribute="leading" secondItem="cxj-Cv-txA" secondAttribute="leading" constant="8" id="BxS-8P-cEj"/>
+                                    <constraint firstItem="pjd-on-cpC" firstAttribute="top" secondItem="cxj-Cv-txA" secondAttribute="top" constant="8" id="EIC-o0-ODd"/>
                                     <constraint firstAttribute="height" constant="128" id="lle-5u-TRT">
                                         <variation key="heightClass=regular-widthClass=compact" constant="200"/>
                                     </constraint>
                                 </constraints>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="pjd-on-cpC"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <exclude reference="lle-5u-TRT"/>
+                                        <exclude reference="BxS-8P-cEj"/>
+                                        <exclude reference="EIC-o0-ODd"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="pjd-on-cpC"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <include reference="lle-5u-TRT"/>
+                                        <include reference="BxS-8P-cEj"/>
+                                        <include reference="EIC-o0-ODd"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -333,17 +369,17 @@
                                 <exclude reference="cxj-Cv-txA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="LHQ-FO-0gb"/>
-                                <exclude reference="nry-2x-jGe"/>
-                                <exclude reference="sWj-K6-bkY"/>
-                                <exclude reference="9YX-S5-B3u"/>
-                                <exclude reference="T3B-fq-ujh"/>
-                                <exclude reference="e2S-St-bnJ"/>
+                                <exclude reference="05m-lv-gEE"/>
+                                <exclude reference="2KJ-yL-00l"/>
                                 <exclude reference="HxP-M1-Ez3"/>
                                 <exclude reference="fZS-ID-PF2"/>
                                 <exclude reference="zqQ-Bp-lVm"/>
-                                <exclude reference="05m-lv-gEE"/>
-                                <exclude reference="2KJ-yL-00l"/>
+                                <exclude reference="9YX-S5-B3u"/>
+                                <exclude reference="T3B-fq-ujh"/>
+                                <exclude reference="e2S-St-bnJ"/>
+                                <exclude reference="LHQ-FO-0gb"/>
+                                <exclude reference="nry-2x-jGe"/>
+                                <exclude reference="sWj-K6-bkY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -354,17 +390,17 @@
                                 <include reference="cxj-Cv-txA"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="LHQ-FO-0gb"/>
-                                <include reference="nry-2x-jGe"/>
-                                <include reference="sWj-K6-bkY"/>
-                                <include reference="9YX-S5-B3u"/>
-                                <include reference="T3B-fq-ujh"/>
-                                <include reference="e2S-St-bnJ"/>
+                                <include reference="05m-lv-gEE"/>
+                                <include reference="2KJ-yL-00l"/>
                                 <include reference="HxP-M1-Ez3"/>
                                 <include reference="fZS-ID-PF2"/>
                                 <include reference="zqQ-Bp-lVm"/>
-                                <include reference="05m-lv-gEE"/>
-                                <include reference="2KJ-yL-00l"/>
+                                <include reference="9YX-S5-B3u"/>
+                                <include reference="T3B-fq-ujh"/>
+                                <include reference="e2S-St-bnJ"/>
+                                <include reference="LHQ-FO-0gb"/>
+                                <include reference="nry-2x-jGe"/>
+                                <include reference="sWj-K6-bkY"/>
                             </mask>
                         </variation>
                         <connections>
@@ -489,6 +525,9 @@
                                                 <include reference="G3X-Ks-3df"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="onShowExistingPhotosFromPhotoLib:" destination="RXj-Pe-NTt" eventType="touchUpInside" id="dfJ-jI-RW7"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumba Sports Shoes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwB-HZ-721">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -1079,6 +1118,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="New Request" id="Jq8-C8-91M"/>
+                    <connections>
+                        <outlet property="imageView" destination="VT4-uC-VHo" id="XpC-9h-aw4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asD-ug-6py" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1474,6 +1516,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UkY-S6-pH2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cUA-tC-bM9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmc-1q-DsY">
@@ -1511,9 +1554,9 @@
                                 <exclude reference="hmc-1q-DsY"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="VuK-Cg-6J2"/>
                                 <exclude reference="1vg-8K-CFd"/>
                                 <exclude reference="d6g-6g-L1j"/>
-                                <exclude reference="VuK-Cg-6J2"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1521,9 +1564,9 @@
                                 <include reference="hmc-1q-DsY"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="VuK-Cg-6J2"/>
                                 <include reference="1vg-8K-CFd"/>
                                 <include reference="d6g-6g-L1j"/>
-                                <include reference="VuK-Cg-6J2"/>
                             </mask>
                         </variation>
                         <connections>

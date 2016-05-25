@@ -9,7 +9,12 @@
 import UIKit
 import ContactsUI
 
-class VCNewRequest: UIViewController, CNContactPickerDelegate {
+class VCNewRequest: UIViewController, CNContactPickerDelegate,
+                    UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // Profile Image
+    @IBOutlet var imageView:UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //
@@ -36,7 +41,7 @@ class VCNewRequest: UIViewController, CNContactPickerDelegate {
     }
     
     
-    // Delegate Methods
+    // MARK: Delegate Methods : Contacts
     /*
      // single selection
      func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact) {
@@ -49,5 +54,25 @@ class VCNewRequest: UIViewController, CNContactPickerDelegate {
     func contactPicker(picker: CNContactPickerViewController, didSelectContacts contacts: [CNContact]){
         print("contactPicker : didSelectContacts")
         print(contacts)
+    }
+    
+    // MARK: Delegate Methods : Camera
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: Storyboard Expose for Photos/Camera
+    @IBAction func onShowExistingPhotosFromPhotoLib(sender:AnyObject){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .PhotoLibrary
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    @IBAction func onShowExistingPhotosFromCamera(sender:AnyObject){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .Camera
+        self.presentViewController(picker, animated: true, completion: nil)
     }
 }
