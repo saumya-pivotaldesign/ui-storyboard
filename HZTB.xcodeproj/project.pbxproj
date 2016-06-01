@@ -34,6 +34,7 @@
 		AE717FBA1CF58840009DB28B /* VCHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCHome.swift; sourceTree = "<group>"; };
 		AE717FBC1CF58D4F009DB28B /* VCSlideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCSlideMenu.swift; sourceTree = "<group>"; };
 		AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCNewRequest.swift; sourceTree = "<group>"; };
+		AEC613221CFEC4E700DFD465 /* HZTB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HZTB.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 		AE531D601CEAED7C00F6F2A5 /* HZTB */ = {
 			isa = PBXGroup;
 			children = (
+				AEC613221CFEC4E700DFD465 /* HZTB.entitlements */,
 				AE531D611CEAED7C00F6F2A5 /* AppDelegate.swift */,
 				AE717FAD1CF587C2009DB28B /* SlideMenu */,
 				AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */,
@@ -122,6 +124,12 @@
 				TargetAttributes = {
 					AE531D5D1CEAED7B00F6F2A5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = YKR7B3DLF3;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
