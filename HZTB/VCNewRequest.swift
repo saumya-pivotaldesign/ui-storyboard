@@ -25,6 +25,10 @@ public class VCNewRequest: UIViewController, CNContactPickerDelegate,
         //
         productIdField.text = pidFromExternal
     }
+    public override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("VCNewRequest : viewWillAppear : ")
+    }
     
     @IBAction func onViewContacts(sender: AnyObject){
         showNativeContactsUI()
@@ -85,7 +89,24 @@ public class VCNewRequest: UIViewController, CNContactPickerDelegate,
         print("onInvitation")
         
         // move back to rootViewController
+        //self.view.window!.rootViewController?.dismissViewControllerAnimated(true, completion: nil)
+        //
+        /*
+        // When came from Weblink
         self.view.window!.rootViewController?.dismissViewControllerAnimated(true, completion: nil)
+        // When came from UI
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        */
+        
+        // Currently we are just checking the value,but a better fix would be to use another variable for identification
+        if(self.pidFromExternal=="000000"){
+            // from webLink
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }else{
+            // from UI
+            self.view.window!.rootViewController?.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
     }
 }
 
