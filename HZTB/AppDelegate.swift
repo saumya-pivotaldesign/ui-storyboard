@@ -66,7 +66,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let cv:VCNewRequest = (s.instantiateViewControllerWithIdentifier("sbid_newRequest") as! VCNewRequest)
         cv.setProductID(url.host!)
         
-        r.presentViewController(cv, animated: true, completion: nil)
+        r.presentViewController(cv, animated: false, completion: nil)
+        
+        //r.presentedViewController?.removeFromParentViewController()
+        
+        //r.presentingViewController?.dismissViewControllerAnimated(false, completion: nil)
+        
+        //r.presentViewController(cv, animated: false, completion: nil)
+        
+        //ref : https://stackoverflow.com/questions/24854802/presenting-a-view-controller-modally-from-an-action-sheets-delegate-in-ios8-ios
+        /*
+        dispatch_async(dispatch_get_main_queue(), ^ {
+            [self presentViewController:vc animated:YES completion:nil];
+            });
+
+        */
+        // TODO: Fix the bug. Its still not going to different viewcontrollers
+        
         
         return true
     }
