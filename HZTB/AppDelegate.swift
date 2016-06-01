@@ -46,6 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
         print("AppDelegate : handleOpenURL");
         print(url)
+        print(url.query)
+        print(url.host)
+        print(url.path)
         
         /*
         let contactPickerViewController = CNContactPickerViewController()
@@ -55,17 +58,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         //presentViewController(contactPickerViewController, animated: true, completion: nil)
         
-        /*
-        let w:UIWindow = UIApplication.sharedApplication().keyWindow
-        let r:UIViewController = w.rootViewController
-        let s:UIStoryboard = r.storyboard
-        let cv = s.instantiateViewControllerWithIdentifier("sbid_newRequest")
-        */
+        
+        let w:UIWindow = UIApplication.sharedApplication().keyWindow!
+        let r:UIViewController = w.rootViewController!
+        let s:UIStoryboard = r.storyboard!
+        //let cv = s.instantiateViewControllerWithIdentifier("sbid_newRequest")
+        let cv:VCNewRequest = (s.instantiateViewControllerWithIdentifier("sbid_newRequest") as! VCNewRequest)
+        cv.setProductID(url.host!)
+        
+        r.presentViewController(cv, animated: true, completion: nil)
         
         return true
     }
     
 
+}
+
+// MARK: Utility
+extension AppDelegate{
+    
 }
 
 

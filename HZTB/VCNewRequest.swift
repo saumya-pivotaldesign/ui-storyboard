@@ -9,15 +9,19 @@
 import UIKit
 import ContactsUI
 
-class VCNewRequest: UIViewController, CNContactPickerDelegate,
+public class VCNewRequest: UIViewController, CNContactPickerDelegate,
                     UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // Profile Image
     @IBOutlet var imageView:UIImageView!
+    @IBOutlet var productIdField:UILabel!
     
-    override func viewDidLoad() {
+    private var pidFromExternal:String = "000000"
+    
+    override public func viewDidLoad() {
         super.viewDidLoad()
         //
+        productIdField.text = pidFromExternal
     }
     
     @IBAction func onViewContacts(sender: AnyObject){
@@ -51,13 +55,13 @@ class VCNewRequest: UIViewController, CNContactPickerDelegate,
      }*/
     
     // multi select
-    func contactPicker(picker: CNContactPickerViewController, didSelectContacts contacts: [CNContact]){
+    public func contactPicker(picker: CNContactPickerViewController, didSelectContacts contacts: [CNContact]){
         print("contactPicker : didSelectContacts")
         print(contacts)
     }
     
     // MARK: Delegate Methods : Camera
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    public func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -74,5 +78,15 @@ class VCNewRequest: UIViewController, CNContactPickerDelegate,
         picker.delegate = self
         picker.sourceType = .Camera
         self.presentViewController(picker, animated: true, completion: nil)
+    }
+}
+
+//MARK: Public API
+extension VCNewRequest{
+    public func setProductID(pid:String){
+        //self.productIdField.text = pid
+        print("setProductID")
+        print(pid)
+        self.pidFromExternal = pid
     }
 }
