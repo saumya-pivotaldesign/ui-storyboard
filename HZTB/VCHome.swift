@@ -60,3 +60,13 @@ extension VCHome: UIViewControllerTransitioningDelegate {
         return interactor.hasStarted ? interactor : nil
     }
 }
+
+// MARK: Camera button for URLScheme test
+extension VCHome {
+    @IBAction func onURLSchemeTest(sender:AnyObject){
+        print("onURLSchemeTest")
+        //let n:NSURL = NSURL(string: "")!
+        UIApplication.sharedApplication().openURL(NSURL(fileURLWithPath: "hztbuddy://test_page/one?token=12345&domain=foo.com"))
+    }
+}
+

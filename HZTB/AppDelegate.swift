@@ -40,7 +40,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    // MARK: External URL handler delegate
+    // Ref: http://www.idev101.com/code/Objective-C/custom_url_schemes.html
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        print("AppDelegate : handleOpenURL");
+        print(url)
+        
+        /*
+        let contactPickerViewController = CNContactPickerViewController()
+        //contactPickerViewController.delegate = self
+        self.window?.rootViewController = contactPickerViewController
+        self.window?.makeKeyAndVisible()
+        */
+        //presentViewController(contactPickerViewController, animated: true, completion: nil)
+        
+        /*
+        let w:UIWindow = UIApplication.sharedApplication().keyWindow
+        let r:UIViewController = w.rootViewController
+        let s:UIStoryboard = r.storyboard
+        let cv = s.instantiateViewControllerWithIdentifier("sbid_newRequest")
+        */
+        
+        return true
+    }
+    
 
 }
+
+
+
 
