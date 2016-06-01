@@ -8,6 +8,8 @@ A UI done with Storyboard.
  - [Two][2]
  - [Three][3]
 
+Try these links. <a href="hztbuddy://one">One</a>
+
 
 
 
