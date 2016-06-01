@@ -81,6 +81,12 @@ public class VCNewRequest: UIViewController, CNContactPickerDelegate,
         picker.sourceType = .Camera
         self.presentViewController(picker, animated: true, completion: nil)
     }
+    @IBAction func onInvitation(sender:AnyObject){
+        print("onInvitation")
+        
+        // move back to rootViewController
+        self.view.window!.rootViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 
 //MARK: Public API

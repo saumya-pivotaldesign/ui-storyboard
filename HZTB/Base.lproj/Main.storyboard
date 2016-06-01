@@ -1047,6 +1047,9 @@
                                         <include reference="bwU-5G-2Tz"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onInvitation:" destination="RXj-Pe-NTt" eventType="touchUpInside" id="RQp-sr-cBB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
