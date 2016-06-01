@@ -31,10 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        print("applicationWillEnterForeground")
+        // Not Working !!
+        //self.window?.rootViewController?.navigationController?.viewControllers.removeAll();
+        //self.window?.rootViewController?.navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        print("applicationDidBecomeActive")
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -50,28 +55,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(url.host)
         print(url.path)
         
-        /*
-        let contactPickerViewController = CNContactPickerViewController()
-        //contactPickerViewController.delegate = self
-        self.window?.rootViewController = contactPickerViewController
-        self.window?.makeKeyAndVisible()
-        */
-        //presentViewController(contactPickerViewController, animated: true, completion: nil)
-        
-        
+        // Type 1
         let w:UIWindow = UIApplication.sharedApplication().keyWindow!
         let r:UIViewController = w.rootViewController!
         let s:UIStoryboard = r.storyboard!
         //let cv = s.instantiateViewControllerWithIdentifier("sbid_newRequest")
         let cv:VCNewRequest = (s.instantiateViewControllerWithIdentifier("sbid_newRequest") as! VCNewRequest)
         cv.setProductID(url.host!)
-        
+        // working
         r.presentViewController(cv, animated: false, completion: nil)
+ 
         
+        /*
+        // Type 2
+        let sb:UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let vc:VCNewRequest = sb.instantiateViewControllerWithIdentifier("sbid_newRequest") as! VCNewRequest
+        vc.setProductID(url.host!)
+        self.window?.rootViewController?.presentViewController(vc, animated: true, completion: nil)
+        */
+        
+        /*
+        // Type 3 : NotWorking
+        let w:UIWindow = UIApplication.sharedApplication().keyWindow!
+        let r:UIViewController = w.rootViewController!
+        r.performSegueWithIdentifier("segue_newRequest", sender: self)
+        */
+        
+        // Not working
         //r.presentedViewController?.removeFromParentViewController()
-        
         //r.presentingViewController?.dismissViewControllerAnimated(false, completion: nil)
-        
         //r.presentViewController(cv, animated: false, completion: nil)
         
         //ref : https://stackoverflow.com/questions/24854802/presenting-a-view-controller-modally-from-an-action-sheets-delegate-in-ios8-ios
@@ -81,9 +93,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             });
 
         */
+        /*
         // TODO: Fix the bug. Its still not going to different viewcontrollers
+        let nc:UINavigationController = UINavigationController(rootViewController: cv)
+        w.rootViewController = nc
+        w.makeKeyAndVisible()
+        */
+        
+        //r.navigationController?.pushViewController(cv, animated: false)
+        //r.navigationController?.presentViewController(cv, animated: false, completion: nil)
+        
+        //r.performSegueWithIdentifier("segue_newRequest", sender: self)
+        //r.navigationController?.performSegueWithIdentifier("segue_newRequest", sender: self)
         
         
+        
+        //
         return true
     }
     

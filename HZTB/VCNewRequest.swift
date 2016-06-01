@@ -21,6 +21,8 @@ public class VCNewRequest: UIViewController, CNContactPickerDelegate,
     override public func viewDidLoad() {
         super.viewDidLoad()
         //
+        print("VCNewRequest : initialisation : ")
+        //
         productIdField.text = pidFromExternal
     }
     
