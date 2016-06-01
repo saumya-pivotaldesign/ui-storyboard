@@ -27,5 +27,5 @@ A UI done with Storyboard.
 
 
  [1]: hztbuddy://one
- [1]: hztbuddy://two
- [1]: hztbuddy://three
+ [2]: hztbuddy://two
+ [3]: hztbuddy://three
