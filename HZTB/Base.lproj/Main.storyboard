@@ -295,7 +295,7 @@
                                             <constraint firstAttribute="width" constant="100" id="cWY-bt-5Gc"/>
                                         </constraints>
                                         <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Camera"/>
+                                        <state key="normal" title="Dummy"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Qnc-MT-5vg"/>
