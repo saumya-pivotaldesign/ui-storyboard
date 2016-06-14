@@ -11,6 +11,7 @@
 		AE531D671CEAED7C00F6F2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE531D651CEAED7C00F6F2A5 /* Main.storyboard */; };
 		AE531D691CEAED7C00F6F2A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE531D681CEAED7C00F6F2A5 /* Assets.xcassets */; };
 		AE531D6C1CEAED7C00F6F2A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE531D6A1CEAED7C00F6F2A5 /* LaunchScreen.storyboard */; };
+		AE5649601D1039DF00FF6302 /* VCRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE56495F1D1039DF00FF6302 /* VCRegistration.swift */; };
 		AE717FB41CF587DF009DB28B /* DismissMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE717FAE1CF587DF009DB28B /* DismissMenuAnimator.swift */; };
 		AE717FB61CF587DF009DB28B /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE717FB01CF587DF009DB28B /* Interactor.swift */; };
 		AE717FB71CF587DF009DB28B /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE717FB11CF587DF009DB28B /* MenuHelper.swift */; };
@@ -27,6 +28,7 @@
 		AE531D681CEAED7C00F6F2A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE531D6B1CEAED7C00F6F2A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE531D6D1CEAED7C00F6F2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE56495F1D1039DF00FF6302 /* VCRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRegistration.swift; sourceTree = "<group>"; };
 		AE717FAE1CF587DF009DB28B /* DismissMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissMenuAnimator.swift; sourceTree = "<group>"; };
 		AE717FB01CF587DF009DB28B /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		AE717FB11CF587DF009DB28B /* MenuHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				AE531D611CEAED7C00F6F2A5 /* AppDelegate.swift */,
 				AE717FAD1CF587C2009DB28B /* SlideMenu */,
 				AE8F08B61CF33C8A004048A0 /* VCNewRequest.swift */,
+				AE56495F1D1039DF00FF6302 /* VCRegistration.swift */,
 				AE531D681CEAED7C00F6F2A5 /* Assets.xcassets */,
 				AE531D651CEAED7C00F6F2A5 /* Main.storyboard */,
 				AE531D6A1CEAED7C00F6F2A5 /* LaunchScreen.storyboard */,
@@ -171,6 +174,7 @@
 			files = (
 				AE717FB61CF587DF009DB28B /* Interactor.swift in Sources */,
 				AE717FB41CF587DF009DB28B /* DismissMenuAnimator.swift in Sources */,
+				AE5649601D1039DF00FF6302 /* VCRegistration.swift in Sources */,
 				AE717FBB1CF58840009DB28B /* VCHome.swift in Sources */,
 				AE8F08B71CF33C8A004048A0 /* VCNewRequest.swift in Sources */,
 				AE531D621CEAED7C00F6F2A5 /* AppDelegate.swift in Sources */,

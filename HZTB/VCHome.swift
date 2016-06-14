@@ -60,7 +60,7 @@ class VCHome: UIViewController {
         */
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("sid_registration") as! UIViewController
+        let vc = storyboard.instantiateViewControllerWithIdentifier("sid_registration") as! VCRegistration
         //self.presentViewController(vc, animated: true, completion: nil)
         //navigationController?.presentViewController(vc, animated: true, completion: nil)
         navigationController?.pushViewController(vc, animated: true)

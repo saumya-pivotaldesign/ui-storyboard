@@ -1626,7 +1626,7 @@
         <!--Registration-->
         <scene sceneID="zni-gT-UbA">
             <objects>
-                <viewController storyboardIdentifier="sid_registration" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7pl-hO-L5H" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sid_registration" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7pl-hO-L5H" customClass="VCRegistration" customModule="HZTB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RvZ-wy-yTL"/>
                         <viewControllerLayoutGuide type="bottom" id="dWh-UN-95P"/>
