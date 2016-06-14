@@ -312,33 +312,66 @@
                                             <action selector="onURLSchemeTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dwm-0U-4zL"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2J-z1-sw3">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="QYz-Io-Flb"/>
+                                            <constraint firstAttribute="height" constant="30" id="eby-YK-IJh"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Register"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="QYz-Io-Flb"/>
+                                                <exclude reference="eby-YK-IJh"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="QYz-Io-Flb"/>
+                                                <include reference="eby-YK-IJh"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="showRegistrationView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lfl-HP-d9Y"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="pjd-on-cpC" firstAttribute="leading" secondItem="cxj-Cv-txA" secondAttribute="leading" constant="8" id="BxS-8P-cEj"/>
                                     <constraint firstItem="pjd-on-cpC" firstAttribute="top" secondItem="cxj-Cv-txA" secondAttribute="top" constant="8" id="EIC-o0-ODd"/>
+                                    <constraint firstItem="h2J-z1-sw3" firstAttribute="top" secondItem="pjd-on-cpC" secondAttribute="bottom" constant="8" id="jy1-SZ-quW"/>
                                     <constraint firstAttribute="height" constant="128" id="lle-5u-TRT">
                                         <variation key="heightClass=regular-widthClass=compact" constant="200"/>
                                     </constraint>
+                                    <constraint firstItem="h2J-z1-sw3" firstAttribute="leading" secondItem="cxj-Cv-txA" secondAttribute="leading" constant="8" id="vo1-6u-FlM"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="pjd-on-cpC"/>
+                                        <exclude reference="h2J-z1-sw3"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="lle-5u-TRT"/>
                                         <exclude reference="BxS-8P-cEj"/>
                                         <exclude reference="EIC-o0-ODd"/>
+                                        <exclude reference="jy1-SZ-quW"/>
+                                        <exclude reference="vo1-6u-FlM"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="pjd-on-cpC"/>
+                                        <include reference="h2J-z1-sw3"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="lle-5u-TRT"/>
                                         <include reference="BxS-8P-cEj"/>
                                         <include reference="EIC-o0-ODd"/>
+                                        <include reference="jy1-SZ-quW"/>
+                                        <include reference="vo1-6u-FlM"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1590,6 +1623,108 @@
             </objects>
             <point key="canvasLocation" x="1086" y="-417.75"/>
         </scene>
+        <!--Registration-->
+        <scene sceneID="zni-gT-UbA">
+            <objects>
+                <viewController storyboardIdentifier="sid_registration" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7pl-hO-L5H" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RvZ-wy-yTL"/>
+                        <viewControllerLayoutGuide type="bottom" id="dWh-UN-95P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UST-Je-jqv">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pvo-tQ-RjU">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="122" width="360" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMw-Ir-sAa">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="93" width="360" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5If-Uu-hlb">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="189" width="360" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGA-tj-Quc">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="160" width="360" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qgo-vF-yEx">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="256" width="360" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGS-ah-cl6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="227" width="360" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEG-j6-DGR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Register"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="323" width="360" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Pvo-tQ-RjU"/>
+                                <exclude reference="SMw-Ir-sAa"/>
+                                <exclude reference="5If-Uu-hlb"/>
+                                <exclude reference="PGA-tj-Quc"/>
+                                <exclude reference="qgo-vF-yEx"/>
+                                <exclude reference="TGS-ah-cl6"/>
+                                <exclude reference="qEG-j6-DGR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Pvo-tQ-RjU"/>
+                                <include reference="SMw-Ir-sAa"/>
+                                <include reference="5If-Uu-hlb"/>
+                                <include reference="PGA-tj-Quc"/>
+                                <include reference="qgo-vF-yEx"/>
+                                <include reference="TGS-ah-cl6"/>
+                                <include reference="qEG-j6-DGR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Registration" id="N3Q-xK-sOO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7E7-Rv-eff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4291.5" y="-204.75"/>
+        </scene>
         <!--Details-->
         <scene sceneID="Qyb-Yy-66a">
             <objects>
@@ -2668,6 +2803,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ul5-ue-V4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086" y="1143.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iO0-6t-0vM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZGf-wx-HwA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A7J-fV-M7c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7pl-hO-L5H" kind="relationship" relationship="rootViewController" id="Dln-8g-IRA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrS-0v-qJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3373.5" y="-204.75"/>
         </scene>
     </scenes>
 </document>

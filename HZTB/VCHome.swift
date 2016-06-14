@@ -41,6 +41,30 @@ class VCHome: UIViewController {
             self.performSegueWithIdentifier("openMenu", sender: nil)
         }
     }
+    @IBAction func showRegistrationView(sender:AnyObject){
+        print("showRegistrationView");
+        /*
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *initViewController = [storyboard instantiateViewControllerWithIdentifier:@"sid_registration"];
+        */
+        
+        /*
+        let vc = ViewController() //change this to your class name
+        self.presentViewController(vc, animated: true, completion: nil)
+        */
+        
+        /*
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("sid_registration")
+        //self.presentViewController(vc!, animated: true, completion: nil)
+        navigationController?.pushViewController(vc!, animated: true)
+        */
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("sid_registration") as! UIViewController
+        //self.presentViewController(vc, animated: true, completion: nil)
+        //navigationController?.presentViewController(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 // MARK: Extension of the VCHome
