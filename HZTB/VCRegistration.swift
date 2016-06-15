@@ -31,6 +31,7 @@ class VCRegistration: UIViewController {
         callServiceToRegister()
         //callRESTtestWith_dataTaskWithRequest()
         
+        
     }
     
     private func dictionaryToQueryString(dict: [String : String]) -> String {
@@ -44,18 +45,24 @@ class VCRegistration: UIViewController {
     
     //MARK: REST call
     private func callServiceToRegister(){
-        //let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!;
-        // uses : dataTaskWithRequest
-        print("callRESTtestWith_dataTaskWithRequest")
+        print("callServiceToRegister")
         
-        let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!; // post - request
+        //let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!; // register
+        let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/ping")!; // ping
+        
         let session:NSURLSession = NSURLSession.sharedSession()
         
         let request = NSMutableURLRequest(URL: sURL)
         request.HTTPMethod = "POST"
         request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
-        let paramString = "mobileNumber=11479874489"
+        
+        //let paramString = "mobileNumber=11479874489" // register
+        let paramString = "mobileNumber=11479874489&imei=dummyimei" // ping
+        
         request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        //request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         var dataTask:NSURLSessionDataTask = session.dataTaskWithRequest(request) { (data:NSData?, response:NSURLResponse?, error:NSError?) in
             print("json data")
@@ -63,10 +70,13 @@ class VCRegistration: UIViewController {
                 print("do")
                 let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as!NSDictionary
                 // use jsonData
+                print(" ==================== SUCCESS ==================== ")
                 NSLog("%@", jsonData)
+                print(" ==================== / SUCCESS ==================== ")
             } catch {
-                print("ERROR")
+                print(" ==================== ERROR ==================== ")
                 print(error)
+                print(" ==================== / ERROR ==================== ")
             }
         }
         
