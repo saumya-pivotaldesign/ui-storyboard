@@ -28,8 +28,8 @@ class VCRegistration: UIViewController {
         print(uPass.text)
         print(uEmail.text)
         
-        callServiceToRegister()
-        
+        //callServiceToRegister()
+        callRESTtestWith_dataTaskWithRequest()
         
     }
     
@@ -46,6 +46,7 @@ class VCRegistration: UIViewController {
     private func callServiceToRegister(){
         let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!;
         let session:NSURLSession = NSURLSession.sharedSession()
+        
         var dataTask:NSURLSessionDataTask = session.dataTaskWithURL(sURL) { (data:NSData?, response:NSURLResponse?, error:NSError?) in
             print("json data")
             do{
@@ -62,14 +63,15 @@ class VCRegistration: UIViewController {
     }
     
     // Test API call
-    private func callRESTtest(){
+    private func callRESTtestWith_dataTaskWithUrl(){
+        // uses : dataTaskWithUrl
         //
         // http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register
         // { "mobileNumber" : "18479874489" }
         // 1. https://httpbin.org/get
         // 2. http://jsonplaceholder.typicode.com/
         
-        print("callServiceToRegister")
+        print("callRESTtestWith_dataTaskWithUrl")
         
         let sURL:NSURL = NSURL(string: "https://httpbin.org/get")!; // works fine
         //let sURL:NSURL = NSURL(string: "http://jsonplaceholder.typicode.com/posts")!; // not working
@@ -102,8 +104,35 @@ class VCRegistration: UIViewController {
         dataTask.resume()
         //
     }
-
-
-
+    private func callRESTtestWith_dataTaskWithRequest(){
+        // uses : dataTaskWithRequest
+        print("callRESTtestWith_dataTaskWithRequest")
+        
+        let sURL:NSURL = NSURL(string: "https://httpbin.org/post")!; // post - request
+        let session:NSURLSession = NSURLSession.sharedSession()
+        
+        let request = NSMutableURLRequest(URL: sURL)
+        request.HTTPMethod = "POST"
+        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
+        let paramString = "data=Hello"
+        request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        var dataTask:NSURLSessionDataTask = session.dataTaskWithRequest(request) { (data:NSData?, response:NSURLResponse?, error:NSError?) in
+            print("json data")
+            do {
+                print("do")
+                let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as!NSDictionary
+                // use jsonData
+                NSLog("%@", jsonData)
+            } catch {
+                // report error
+                print("ERROR")
+            }
+        }
+        
+        // finally call this
+        dataTask.resume()
+        //
+    }
 
 }
