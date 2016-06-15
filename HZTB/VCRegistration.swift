@@ -44,6 +44,26 @@ class VCRegistration: UIViewController {
     
     //MARK: REST call
     private func callServiceToRegister(){
+        let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!;
+        let session:NSURLSession = NSURLSession.sharedSession()
+        var dataTask:NSURLSessionDataTask = session.dataTaskWithURL(sURL) { (data:NSData?, response:NSURLResponse?, error:NSError?) in
+            print("json data")
+            do{
+                print("do")
+                let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as!NSDictionary
+                NSLog("%@", jsonData)
+            }catch{
+                print("ERROR")
+                print(error)
+            }
+        }
+        // call the service
+        dataTask.resume()
+    }
+    
+    // Test API call
+    private func callRESTtest(){
+        //
         // http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register
         // { "mobileNumber" : "18479874489" }
         // 1. https://httpbin.org/get
@@ -51,11 +71,11 @@ class VCRegistration: UIViewController {
         
         print("callServiceToRegister")
         
-        //let sURL:NSURL = NSURL(string: "https://httpbin.org/get")!; // works fine
+        let sURL:NSURL = NSURL(string: "https://httpbin.org/get")!; // works fine
         //let sURL:NSURL = NSURL(string: "http://jsonplaceholder.typicode.com/posts")!; // not working
         // let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!; // actual call
         
-        let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!;
+        //let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!;
         //var err: NSError?
         
         let session:NSURLSession = NSURLSession.sharedSession()
