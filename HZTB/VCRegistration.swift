@@ -28,8 +28,8 @@ class VCRegistration: UIViewController {
         print(uPass.text)
         print(uEmail.text)
         
-        //callServiceToRegister()
-        callRESTtestWith_dataTaskWithRequest()
+        callServiceToRegister()
+        //callRESTtestWith_dataTaskWithRequest()
         
     }
     
@@ -44,22 +44,35 @@ class VCRegistration: UIViewController {
     
     //MARK: REST call
     private func callServiceToRegister(){
-        let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!;
+        //let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!;
+        // uses : dataTaskWithRequest
+        print("callRESTtestWith_dataTaskWithRequest")
+        
+        let sURL:NSURL = NSURL(string: "http://hztb-dev.us-east-1.elasticbeanstalk.com/user/register")!; // post - request
         let session:NSURLSession = NSURLSession.sharedSession()
         
-        var dataTask:NSURLSessionDataTask = session.dataTaskWithURL(sURL) { (data:NSData?, response:NSURLResponse?, error:NSError?) in
+        let request = NSMutableURLRequest(URL: sURL)
+        request.HTTPMethod = "POST"
+        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
+        let paramString = "mobileNumber=11479874489"
+        request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        var dataTask:NSURLSessionDataTask = session.dataTaskWithRequest(request) { (data:NSData?, response:NSURLResponse?, error:NSError?) in
             print("json data")
-            do{
+            do {
                 print("do")
                 let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as!NSDictionary
+                // use jsonData
                 NSLog("%@", jsonData)
-            }catch{
+            } catch {
                 print("ERROR")
                 print(error)
             }
         }
-        // call the service
+        
+        // finally call this
         dataTask.resume()
+        //
     }
     
     // Test API call
@@ -104,6 +117,7 @@ class VCRegistration: UIViewController {
         dataTask.resume()
         //
     }
+    // REST call with POST
     private func callRESTtestWith_dataTaskWithRequest(){
         // uses : dataTaskWithRequest
         print("callRESTtestWith_dataTaskWithRequest")
